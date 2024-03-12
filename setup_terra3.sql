@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `kontinent`
+-- Tabellenstruktur für Tabelle `t3_kontinent`
 --
 
-CREATE TABLE `kontinent`
+CREATE TABLE `t3_kontinent`
 (
 	`KNR`                  varchar(2) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
 	`Name`                 varchar(15) CHARACTER SET latin1 COLLATE latin1_german1_ci DEFAULT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `kontinent`
   COLLATE = latin1_general_ci;
 
 --
--- Daten für Tabelle `kontinent`
+-- Daten für Tabelle `t3_kontinent`
 --
 
-INSERT INTO `kontinent` (`KNR`, `Name`, `Flaeche`, `Einwohner`, `AnteilErdoberflaeche`)
+INSERT INTO `t3_kontinent` (`KNR`, `Name`, `Flaeche`, `Einwohner`, `AnteilErdoberflaeche`)
 VALUES ('AA', 'Antarktis', 13, 0, '2.60'),
 	   ('AF', 'Afrika', 30, 944, '5.90'),
 	   ('AS', 'Asien', 44, 4010, '8.70'),
@@ -54,10 +54,10 @@ VALUES ('AA', 'Antarktis', 13, 0, '2.60'),
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `land`
+-- Tabellenstruktur für Tabelle `t3_land`
 --
 
-CREATE TABLE `land`
+CREATE TABLE `t3_land`
 (
 	`LNR`       varchar(4) CHARACTER SET latin1 COLLATE latin1_german1_ci  NOT NULL,
 	`Name`      varchar(50) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
@@ -70,10 +70,10 @@ CREATE TABLE `land`
   COLLATE = latin1_general_ci;
 
 --
--- Daten für Tabelle `land`
+-- Daten für Tabelle `t3_land`
 --
 
-INSERT INTO `land` (`LNR`, `Name`, `KNR`, `Einwohner`, `Flaeche`, `HauptONR`)
+INSERT INTO `t3_land` (`LNR`, `Name`, `KNR`, `Einwohner`, `Flaeche`, `HauptONR`)
 VALUES ('A', 'Österreich', 'EU', '8.51', 83879, 'VIENNA'),
 	   ('AC', 'Antigua und Barbuda', 'NA', '0.09', 443, 'SAINTJ'),
 	   ('AF', 'Afghanistan', 'AS', '33.40', 652230, 'KABUL'),
@@ -275,10 +275,10 @@ VALUES ('A', 'Österreich', 'EU', '8.51', 83879, 'VIENNA'),
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `ort`
+-- Tabellenstruktur für Tabelle `t3_ort`
 --
 
-CREATE TABLE `ort`
+CREATE TABLE `t3_ort`
 (
 	`ONR`        varchar(6) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
 	`Name`       varchar(30) CHARACTER SET latin1 COLLATE latin1_german1_ci DEFAULT NULL,
@@ -292,10 +292,10 @@ CREATE TABLE `ort`
   COLLATE = latin1_general_ci;
 
 --
--- Daten für Tabelle `ort`
+-- Daten für Tabelle `t3_ort`
 --
 
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('A29078', 'Annaberg', 'A', 'Niederösterreich', 662, '47.8720', '15.3770'),
 	   ('A29100', 'Attnang-Puchheim', 'A', 'Oberösterreich', 8982, '48.0083', '13.7167'),
 	   ('A29124', 'Bad Wimsbach-Neydharting', 'A', 'Oberösterreich', 2375, '48.0667', '13.9000'),
@@ -954,7 +954,7 @@ VALUES ('A29078', 'Annaberg', 'A', 'Niederösterreich', 662, '47.8720', '15.3770
 	   ('A65316', 'Mistelbach', 'A', 'Niederösterreich', 10907, '48.5833', '16.5000'),
 	   ('A65324', 'Neudorf bei Staatz', 'A', 'Niederösterreich', 1380, '48.7208', '16.4914'),
 	   ('A65328', 'Niederleis', 'A', 'Niederösterreich', 816, '48.5500', '16.4000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('A65332', 'Pillichsdorf', 'A', 'Niederösterreich', 1064, '48.3620', '16.5400'),
 	   ('A65333', 'Poysdorf', 'A', 'Niederösterreich', 5514, '48.6700', '16.6290'),
 	   ('A65342', 'Rabensburg', 'A', 'Niederösterreich', 1100, '48.6500', '16.9000'),
@@ -1585,7 +1585,7 @@ VALUES ('A65332', 'Pillichsdorf', 'A', 'Niederösterreich', 1064, '48.3620', '16
 	   ('A73239', 'Niederthalheim', 'A', 'Oberösterreich', 1024, '48.1000', '13.7500'),
 	   ('A73261', 'Nußdorf am Attersee', 'A', 'Oberösterreich', 1093, '47.8833', '13.5167'),
 	   ('A73272', 'Oberhofen am Irrsee', 'A', 'Oberösterreich', 1342, '47.9500', '13.3000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('A73286', 'Oberndorf bei Schwanenstadt', 'A', 'Oberösterreich', 1404, '48.0500', '13.7500'),
 	   ('A73294', 'Oberwang', 'A', 'Oberösterreich', 1570, '47.8667', '13.4333'),
 	   ('A73300', 'Ottnang am Hausruck', 'A', 'Oberösterreich', 3796, '48.1000', '13.6667'),
@@ -2261,7 +2261,7 @@ VALUES ('A73286', 'Oberndorf bei Schwanenstadt', 'A', 'Oberösterreich', 1404, '
 	   ('A77320', 'Neudorf bei Passail', 'A', 'Steiermark', 494, '47.2551', '15.4661'),
 	   ('A77324', 'Nitscha', 'A', 'Steiermark', 1399, '47.1277', '15.7492'),
 	   ('A77329', 'Oberrettenbach', 'A', 'Steiermark', 488, '47.1500', '15.8000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('A77332', 'Passail', 'A', 'Steiermark', 1996, '47.2820', '15.5153'),
 	   ('A77336', 'Pischelsdorf in der Steiermark', 'A', 'Steiermark', 2454, '47.1735', '15.8060'),
 	   ('A77341', 'Preßguts', 'A', 'Steiermark', 379, '47.1712', '15.7373'),
@@ -2996,7 +2996,7 @@ VALUES ('A77332', 'Passail', 'A', 'Steiermark', 1996, '47.2820', '15.5153'),
 	   ('ARRANO', 'Arras', 'F', 'Nord-Pas-de-Calais', 49575, '50.2900', '2.7800'),
 	   ('ARRECA', 'Arrecife', 'E', 'Canary Islands', 60334, '28.9600', '-13.5500'),
 	   ('ARSANA', 'Karsana', 'WAN', NULL, 156644, '9.1500', '7.3400');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('ARTHSC', 'Arth', 'CH', 'Schwyz', 10046, '47.0700', '8.5100'),
 	   ('ARTIAR', 'Artigas', 'U', 'Artigas', 43897, '-30.4100', '-56.4800'),
 	   ('ARTYPR', 'Artyom', 'RUS', 'Primorski', 103784, '43.3600', '132.1800'),
@@ -3701,7 +3701,7 @@ VALUES ('ARTHSC', 'Arth', 'CH', 'Schwyz', 10046, '47.0700', '8.5100'),
 	   ('CALARA', 'Calarasi', 'RO', 'Calarasi', 73800, '44.1944', '27.3353'),
 	   ('CALAVI', 'Abomey-Calavi', 'RPB', NULL, 518256, '6.4400', '2.3600'),
 	   ('CALCCU', 'Calca', 'PE', 'Cusco', 10233, '-13.3200', '-71.9700');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('CALCUT', 'Kalkutta', 'IND', 'Bangla', 4486679, '22.5730', '88.3640'),
 	   ('CALDAN', 'Caldas', 'CO', 'Antioquia', 53683, '6.1100', '-75.6500'),
 	   ('CALEON', 'Caledonia', 'CDN', 'Ontario', 10036, '43.0700', '-79.9500'),
@@ -4447,7 +4447,7 @@ VALUES ('CALCUT', 'Kalkutta', 'IND', 'Bangla', 4486679, '22.5730', '88.3640'),
 	   ('CH1296', 'Knutwil', 'CH', 'Luzern', 1583, '47.1994', '8.0704'),
 	   ('CH1299', 'Luthern', 'CH', 'Luzern', 1520, '47.0534', '7.9117'),
 	   ('CH1301', 'Malters', 'CH', 'Luzern', 6127, '47.0413', '8.1934');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('CH1302', 'Mauensee', 'CH', 'Luzern', 958, '47.1713', '8.0633'),
 	   ('CH1303', 'Meggen (LU)', 'CH', 'Luzern', 5923, '47.0514', '8.3710'),
 	   ('CH1304', 'Meierskappel', 'CH', 'Luzern', 1019, '47.1181', '8.4413'),
@@ -5206,7 +5206,7 @@ VALUES ('CH1302', 'Mauensee', 'CH', 'Luzern', 958, '47.1713', '8.0633'),
 	   ('CH8759', 'Zell (ZH)', 'CH', 'Zürich', 4595, '47.4043', '9.2364'),
 	   ('CH8760', 'Aesch (ZH)', 'CH', 'Zürich', 950, '47.3350', '8.4041'),
 	   ('CH8761', 'Birmensdorf (ZH)', 'CH', 'Zürich', 5451, '47.3537', '8.4354');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('CH8762', 'Geroldswil', 'CH', 'Zürich', 4540, '47.4199', '8.4096'),
 	   ('CH8763', 'Uitikon', 'CH', 'Zürich', 3480, '47.3664', '8.4584'),
 	   ('CH8764', 'Weiningen (ZH)', 'CH', 'Zürich', 3791, '47.4182', '8.4072'),
@@ -5936,7 +5936,7 @@ VALUES ('CH8762', 'Geroldswil', 'CH', 'Zürich', 4540, '47.4199', '8.4096'),
 	   ('CH9505', 'Dozwil', 'CH', 'Thurgau', 492, '47.5747', '9.3190'),
 	   ('CH9506', 'Hefenhofen', 'CH', 'Thurgau', 1108, '47.5596', '9.3100'),
 	   ('CH9507', 'Roggwil (TG)', 'CH', 'Thurgau', 2462, '47.5013', '9.3707');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('CH9508', 'Bischofszell', 'CH', 'Thurgau', 5421, '47.4950', '9.2080'),
 	   ('CH9509', 'Hauptwil-Gottshaus', 'CH', 'Thurgau', 1914, '47.4865', '9.2799'),
 	   ('CH9510', 'Hohentannen', 'CH', 'Thurgau', 586, '47.5129', '9.2236'),
@@ -6666,7 +6666,7 @@ VALUES ('CH9508', 'Bischofszell', 'CH', 'Thurgau', 5421, '47.4950', '9.2080'),
 	   ('CONCOR', 'Concord', 'USA', 'New Hampshire', 40700, '43.2062', '-71.5363'),
 	   ('CONCQU', 'Concepcion Chiquirichapa', 'GCA', 'Quezaltenango', 10280, '14.8500', '-91.6200'),
 	   ('CONCSA', 'Concepcion', 'CR', 'San Jose', 24323, '9.9300', '-84.0000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('CONCVA', 'Concon', 'RCH', 'Valparaiso', 34929, '-32.9200', '-71.5200'),
 	   ('CONDES', 'Condega', 'NIC', 'Esteli', 10707, '13.3500', '-86.4000'),
 	   ('CONFIL', 'Conflans-Sainte-Honorine', 'F', 'Ile-de-France', 38667, '49.0100', '2.1000'),
@@ -7329,7 +7329,7 @@ VALUES ('CONCVA', 'Concon', 'RCH', 'Valparaiso', 34929, '-32.9200', '-71.5200'),
 	   ('D13940', 'Bad Kösen', 'D', 'Sachsen-Anhalt', 5490, '51.1333', '11.7167'),
 	   ('D13941', 'Bad Köstritz', 'D', 'Thüringen', 4003, '50.9333', '12.0167'),
 	   ('D13942', 'Bad Kohlgrub', 'D', 'Bayern', 2440, '47.6667', '11.0500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D13944', 'Bad Krozingen', 'D', 'Baden-Württemberg', 17270, '47.9167', '7.7000'),
 	   ('D13945', 'Bad Laasphe', 'D', 'Nordrhein-Westfalen', 15347, '50.9333', '8.4000'),
 	   ('D13946', 'Bad Laer', 'D', 'Niedersachsen', 9251, '52.1000', '8.0833'),
@@ -7971,7 +7971,7 @@ VALUES ('D13944', 'Bad Krozingen', 'D', 'Baden-Württemberg', 17270, '47.9167', 
 	   ('D14692', 'Bönningstedt', 'D', 'Schleswig-Holstein', 4077, '53.6667', '9.9167'),
 	   ('D14693', 'Börfink', 'D', 'Rheinland-Pfalz', 199, '49.6833', '7.0833'),
 	   ('D14694', 'Börger', 'D', 'Niedersachsen', 2671, '52.9000', '7.5167');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D14695', 'Börgerende-Rethwisch', 'D', 'Mecklenburg-Vorpommern', 1698, '54.1333', '11.9167'),
 	   ('D14696', 'Börm bei Schleswig', 'D', 'Schleswig-Holstein', 768, '54.4000', '9.3833'),
 	   ('D14697', 'Börnichen / Erzgebirge', 'D', 'Sachsen', 1098, '50.7500', '13.1333'),
@@ -8615,7 +8615,7 @@ VALUES ('D14695', 'Börgerende-Rethwisch', 'D', 'Mecklenburg-Vorpommern', 1698, 
 	   ('D15427', 'Dannau, Kreis Plön', 'D', 'Schleswig-Holstein', 686, '54.2500', '10.5333'),
 	   ('D15428', 'Danndorf, Niedersachsen', 'D', 'Niedersachsen', 2074, '52.4333', '10.9167'),
 	   ('D15430', 'Dannenberg (Elbe)', 'D', 'Niedersachsen', 8727, '53.0904', '11.0924');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D15431', 'Dannenfels, Pfalz', 'D', 'Rheinland-Pfalz', 958, '49.6333', '7.9500'),
 	   ('D15434', 'Dannewerk', 'D', 'Schleswig-Holstein', 1064, '54.4833', '9.5000'),
 	   ('D15437', 'Danstedt', 'D', 'Sachsen-Anhalt', 554, '51.9000', '10.8833'),
@@ -9269,7 +9269,7 @@ VALUES ('D15431', 'Dannenfels, Pfalz', 'D', 'Rheinland-Pfalz', 958, '49.6333', '
 	   ('D16187', 'Emmering bei Wasserburg am Inn', 'D', 'Bayern', 1405, '48.0000', '12.0500'),
 	   ('D16188', 'Emmerthal, Niedersachsen', 'D', 'Niedersachsen', 11241, '52.0500', '9.3833'),
 	   ('D16189', 'Emmerting', 'D', 'Bayern', 4037, '48.2000', '12.7667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D16190', 'Emmerzhausen', 'D', 'Rheinland-Pfalz', 760, '50.7167', '8.0333'),
 	   ('D16191', 'Emmingen-Liptingen', 'D', 'Baden-Württemberg', 4559, '47.9333', '8.8833'),
 	   ('D16192', 'Empfertshausen', 'D', 'Thüringen', 673, '50.6667', '10.1000'),
@@ -9924,7 +9924,7 @@ VALUES ('D16190', 'Emmerzhausen', 'D', 'Rheinland-Pfalz', 760, '50.7167', '8.033
 	   ('D16931', 'Gemünden (Wohra)', 'D', 'Hessen', 4147, '50.9667', '8.9667'),
 	   ('D16932', 'Genderkingen', 'D', 'Bayern', 1196, '48.7000', '10.8833'),
 	   ('D16933', 'Gengenbach', 'D', 'Baden-Württemberg', 11086, '48.4000', '8.0167');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D16936', 'Genthin', 'D', 'Sachsen-Anhalt', 14524, '52.4000', '12.1667'),
 	   ('D16937', 'Gentingen', 'D', 'Rheinland-Pfalz', 55, '49.9000', '6.2333'),
 	   ('D16938', 'Genzkow', 'D', 'Mecklenburg-Vorpommern', 168, '53.6333', '13.5000'),
@@ -10576,7 +10576,7 @@ VALUES ('D16936', 'Genthin', 'D', 'Sachsen-Anhalt', 14524, '52.4000', '12.1667')
 	   ('D17723', 'Haag an der Amper', 'D', 'Bayern', 2899, '48.4667', '11.8333'),
 	   ('D17724', 'Haag in Oberbayern', 'D', 'Bayern', 6262, '48.1667', '12.1833'),
 	   ('D17725', 'Haale', 'D', 'Schleswig-Holstein', 522, '54.1833', '9.5500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D17726', 'Haan, Rheinland', 'D', 'Nordrhein-Westfalen', 29370, '51.2000', '7.0000'),
 	   ('D17727', 'Haar bei München', 'D', 'Bayern', 17873, '48.1000', '11.7333'),
 	   ('D17728', 'Haarbach, Niederbayern', 'D', 'Bayern', 2637, '48.5000', '13.1500'),
@@ -11220,7 +11220,7 @@ VALUES ('D17726', 'Haan, Rheinland', 'D', 'Nordrhein-Westfalen', 29370, '51.2000
 	   ('D18441', 'Höhfröschen', 'D', 'Rheinland-Pfalz', 941, '49.2500', '7.5667'),
 	   ('D18442', 'Höhn, Westerwald', 'D', 'Rheinland-Pfalz', 3124, '50.6167', '7.9833'),
 	   ('D18443', 'Höhndorf', 'D', 'Schleswig-Holstein', 369, '54.3667', '10.3667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D18444', 'Höhnstedt', 'D', 'Sachsen-Anhalt', 1605, '51.5000', '11.7333'),
 	   ('D18446', 'Hömberg', 'D', 'Rheinland-Pfalz', 334, '50.3333', '7.7833'),
 	   ('D18448', 'Höpfingen', 'D', 'Baden-Württemberg', 3298, '49.6025', '9.4286'),
@@ -11869,7 +11869,7 @@ VALUES ('D18444', 'Höhnstedt', 'D', 'Sachsen-Anhalt', 1605, '51.5000', '11.7333
 	   ('D19182', 'Kell am See', 'D', 'Rheinland-Pfalz', 1944, '49.6333', '6.8333'),
 	   ('D19183', 'Kellenbach', 'D', 'Rheinland-Pfalz', 271, '49.8500', '7.4833'),
 	   ('D19184', 'Kellenhusen (Ostsee)', 'D', 'Schleswig-Holstein', 1060, '54.1833', '11.0667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D19185', 'Kellinghusen', 'D', 'Schleswig-Holstein', 8037, '53.9500', '9.7167'),
 	   ('D19186', 'Kellmünz an der Iller', 'D', 'Bayern', 1364, '48.1167', '10.1333'),
 	   ('D19187', 'Kelsterbach', 'D', 'Hessen', 13854, '50.0667', '8.5333'),
@@ -12518,7 +12518,7 @@ VALUES ('D19185', 'Kellinghusen', 'D', 'Schleswig-Holstein', 8037, '53.9500', '9
 	   ('D19952', 'Langerringen', 'D', 'Bayern', 3780, '48.1500', '10.7667'),
 	   ('D19953', 'Langerwehe', 'D', 'Nordrhein-Westfalen', 13993, '50.8167', '6.3500'),
 	   ('D19955', 'Langewahl', 'D', 'Brandenburg', 817, '52.3333', '14.1000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D19956', 'Langewiesen', 'D', 'Thüringen', 3729, '50.6667', '10.9833'),
 	   ('D19957', 'Langfurth, Mittelfranken', 'D', 'Bayern', 2173, '49.1000', '10.4500'),
 	   ('D19958', 'Langgöns', 'D', 'Hessen', 12161, '50.5000', '8.6667'),
@@ -13171,7 +13171,7 @@ VALUES ('D19956', 'Langewiesen', 'D', 'Thüringen', 3729, '50.6667', '10.9833'),
 	   ('D20718', 'Mauchenheim', 'D', 'Rheinland-Pfalz', 966, '49.7181', '8.0461'),
 	   ('D20719', 'Mauden', 'D', 'Rheinland-Pfalz', 116, '50.7167', '8.0000'),
 	   ('D20720', 'Mauel bei Waxweiler', 'D', 'Rheinland-Pfalz', 69, '50.0667', '6.4000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D20721', 'Mauer (Baden)', 'D', 'Baden-Württemberg', 3636, '49.3408', '8.8003'),
 	   ('D20722', 'Mauern, Kreis Freising', 'D', 'Bayern', 2725, '48.5167', '11.9000'),
 	   ('D20723', 'Mauerstetten bei Kaufbeuren', 'D', 'Bayern', 2954, '47.8833', '10.6667'),
@@ -13821,7 +13821,7 @@ VALUES ('D20721', 'Mauer (Baden)', 'D', 'Baden-Württemberg', 3636, '49.3408', '
 	   ('D21461', 'Neuhausen ob Eck', 'D', 'Baden-Württemberg', 3844, '47.9667', '8.9333'),
 	   ('D21462', 'Neuhaus-Schierschnitz', 'D', 'Thüringen', 3501, '50.3167', '11.2500'),
 	   ('D21463', 'Neuheilenbach', 'D', 'Rheinland-Pfalz', 264, '50.1138', '6.5612');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D21465', 'Neuhemsbach', 'D', 'Rheinland-Pfalz', 838, '49.5167', '7.9167'),
 	   ('D21466', 'Neuhof bei Hildesheim', 'D', 'Niedersachsen', 478, '51.9833', '10.0500'),
 	   ('D21468', 'Neuhof, Kreis Fulda', 'D', 'Hessen', 11327, '50.4333', '9.6167'),
@@ -14470,7 +14470,7 @@ VALUES ('D21465', 'Neuhemsbach', 'D', 'Rheinland-Pfalz', 838, '49.5167', '7.9167
 	   ('D22175', 'Orbis', 'D', 'Rheinland-Pfalz', 684, '49.7000', '8.0000'),
 	   ('D22176', 'Orenhofen', 'D', 'Rheinland-Pfalz', 1347, '49.9000', '6.6500'),
 	   ('D22177', 'Orfgen', 'D', 'Rheinland-Pfalz', 248, '50.6667', '7.5333');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D22178', 'Orlamünde', 'D', 'Thüringen', 1327, '50.7833', '11.5167'),
 	   ('D22179', 'Orlenbach', 'D', 'Rheinland-Pfalz', 217, '50.1667', '6.3833'),
 	   ('D22180', 'Ormont', 'D', 'Rheinland-Pfalz', 386, '50.3333', '6.4500'),
@@ -15128,7 +15128,7 @@ VALUES ('D22178', 'Orlamünde', 'D', 'Thüringen', 1327, '50.7833', '11.5167'),
 	   ('D22948', 'Reimershagen', 'D', 'Mecklenburg-Vorpommern', 500, '53.6667', '12.1833'),
 	   ('D22949', 'Reimlingen', 'D', 'Bayern', 1358, '48.8167', '10.5167'),
 	   ('D22950', 'Reinbek', 'D', 'Schleswig-Holstein', 25598, '53.5167', '10.2500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D22951', 'Reinberg bei Grimmen', 'D', 'Mecklenburg-Vorpommern', 1196, '54.2167', '13.2500'),
 	   ('D22952', 'Reinfeld (Holstein)', 'D', 'Schleswig-Holstein', 8451, '53.8333', '10.4833'),
 	   ('D22953', 'Reinhardshagen', 'D', 'Hessen', 5101, '51.4917', '9.6083'),
@@ -15774,7 +15774,7 @@ VALUES ('D22951', 'Reinberg bei Grimmen', 'D', 'Mecklenburg-Vorpommern', 1196, '
 	   ('D23704', 'Schiltberg', 'D', 'Bayern', 1813, '48.4667', '11.2333'),
 	   ('D23705', 'Schimberg', 'D', 'Thüringen', 2473, '51.2667', '10.1500'),
 	   ('D23706', 'Schimm', 'D', 'Mecklenburg-Vorpommern', 311, '53.8333', '11.5667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D23707', 'Schindhard', 'D', 'Rheinland-Pfalz', 627, '49.1333', '7.8167'),
 	   ('D23708', 'Schinkel bei Gettorf', 'D', 'Schleswig-Holstein', 1037, '54.3667', '9.9500'),
 	   ('D23709', 'Schinne', 'D', 'Sachsen-Anhalt', 484, '52.6667', '11.7333'),
@@ -16422,7 +16422,7 @@ VALUES ('D23707', 'Schindhard', 'D', 'Rheinland-Pfalz', 627, '49.1333', '7.8167'
 	   ('D24451', 'Stadum', 'D', 'Schleswig-Holstein', 1071, '54.7333', '9.0500'),
 	   ('D24452', 'Stäbelow', 'D', 'Mecklenburg-Vorpommern', 1246, '54.0333', '12.0167'),
 	   ('D24453', 'Staffhorst', 'D', 'Niedersachsen', 591, '52.7167', '8.9667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D24454', 'Stafstedt bei Rendsburg', 'D', 'Schleswig-Holstein', 369, '54.1667', '9.6667'),
 	   ('D24455', 'Stahlberg', 'D', 'Rheinland-Pfalz', 188, '49.6667', '7.7833'),
 	   ('D24456', 'Stahlhofen, Westerwald', 'D', 'Rheinland-Pfalz', 688, '50.4000', '7.8667'),
@@ -17073,7 +17073,7 @@ VALUES ('D24454', 'Stafstedt bei Rendsburg', 'D', 'Schleswig-Holstein', 369, '54
 	   ('D25178', 'Uehlfeld', 'D', 'Bayern', 2980, '49.6667', '10.7333'),
 	   ('D25179', 'Ühlingen-Birkendorf', 'D', 'Baden-Württemberg', 5216, '47.7167', '8.3167'),
 	   ('D25180', 'Uehrde', 'D', 'Niedersachsen', 1116, '52.1000', '10.7667');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D25181', 'Uelitz', 'D', 'Mecklenburg-Vorpommern', 467, '53.4833', '11.4333'),
 	   ('D25182', 'Uelsby', 'D', 'Schleswig-Holstein', 473, '54.6333', '9.6000'),
 	   ('D25183', 'Uelsen', 'D', 'Niedersachsen', 4805, '52.5000', '6.8833'),
@@ -17728,7 +17728,7 @@ VALUES ('D25181', 'Uelitz', 'D', 'Mecklenburg-Vorpommern', 467, '53.4833', '11.4
 	   ('D25917', 'Passow bei Angermünde', 'D', 'Brandenburg', 1462, '53.1556', '14.1167'),
 	   ('D25918', 'Welsleben', 'D', 'Sachsen-Anhalt', 1851, '52.0000', '11.6500'),
 	   ('D25920', 'Welt', 'D', 'Schleswig-Holstein', 223, '54.3000', '8.8000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D25921', 'Welterod', 'D', 'Rheinland-Pfalz', 545, '50.1333', '7.8833'),
 	   ('D25922', 'Weltersburg', 'D', 'Rheinland-Pfalz', 274, '50.5333', '7.9500'),
 	   ('D25923', 'Welver', 'D', 'Nordrhein-Westfalen', 12848, '51.6167', '7.9667'),
@@ -18375,7 +18375,7 @@ VALUES ('D25921', 'Welterod', 'D', 'Rheinland-Pfalz', 545, '50.1333', '7.8833'),
 	   ('D26909', 'Sachsenhagen', 'D', 'Niedersachsen', 2091, '52.3901', '9.2473'),
 	   ('D27335', 'Altlandsberg', 'D', 'Brandenburg', 8189, '52.5667', '13.7333'),
 	   ('D27501', 'Schlaubetal', 'D', 'Brandenburg', 1980, '52.1289', '14.5111');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('D27513', 'Siehdichum', 'D', 'Brandenburg', 1677, '52.1944', '14.5333'),
 	   ('D27558', 'Bliesdorf bei Bad Freienwalde', 'D', 'Brandenburg', 1334, '52.6778', '14.1615'),
 	   ('D27564', 'Fichtenhöhe', 'D', 'Brandenburg', 578, '52.4556', '14.4469'),
@@ -19071,7 +19071,7 @@ VALUES ('D27513', 'Siehdichum', 'D', 'Brandenburg', 1677, '52.1944', '14.5333'),
 	   ('FL7003', 'Balzers', 'FL', 'Oberland', 4583, '47.0689', '9.5072'),
 	   ('FL7005', 'Schaan', 'FL', 'Oberland', 5959, '47.1681', '9.5111'),
 	   ('FL7007', 'Eschen', 'FL', 'Unterland', 4354, '47.2139', '9.5242');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('FL7008', 'Mauren', 'FL', 'Unterland', 4198, '47.2197', '9.5428'),
 	   ('FLANTO', 'Flandes', 'CO', 'Tolima', 24529, '4.2900', '-74.8200'),
 	   ('FLENSB', 'Flensburg', 'D', 'Schleswig-Holstein', 84694, '54.7830', '9.4330'),
@@ -19775,7 +19775,7 @@ VALUES ('FL7008', 'Mauren', 'FL', 'Unterland', 4198, '47.2197', '9.5428'),
 	   ('IBARGG', 'Bareggio', 'I', 'Lombardei', 17113, '45.4700', '8.9800'),
 	   ('IBARIM', 'Ibarra', 'EC', 'Imbabura', 128288, '0.3600', '-78.1300'),
 	   ('IBARIS', 'Baronissi', 'I', 'Campania', 16761, '40.7400', '14.7500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('IBARLO', 'Barcellona', 'I', 'Sizilien', 40732, '38.1600', '15.2100'),
 	   ('IBARZA', 'Baranzate', 'I', 'Lombardei', 11775, '45.5300', '9.1200'),
 	   ('IBASAP', 'Bassano del Grappa', 'I', 'Veneto', 43217, '45.7700', '11.7400'),
@@ -20490,7 +20490,7 @@ VALUES ('IBARLO', 'Barcellona', 'I', 'Sizilien', 40732, '38.1600', '15.2100'),
 	   ('IMONOL', 'Mondolfo', 'I', 'Marken', 12127, '43.7600', '13.1100'),
 	   ('IMONON', 'Monza', 'I', 'Lombardei', 123843, '45.5800', '9.2700'),
 	   ('IMONOX', 'Monterotondo', 'I', 'Lazio', 38380, '42.0500', '12.6200');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('IMONPA', 'Monte San Giovanni Campano', 'I', 'Lazio', 12564, '41.6400', '13.5100'),
 	   ('IMONPI', 'Monteforte Irpino', 'I', 'Campania', 11816, '40.9000', '14.7000'),
 	   ('IMONPO', 'Monopoli', 'I', 'Apulien', 54408, '40.9500', '17.2800'),
@@ -21199,7 +21199,7 @@ VALUES ('IMONPA', 'Monte San Giovanni Campano', 'I', 'Lazio', 12564, '41.6400', 
 	   ('JUAZBA', 'Juazeiro', 'BR', 'Bahia', 153812, '-9.4200', '-40.5000'),
 	   ('JUAZCE', 'Juazeiro do Norte', 'BR', 'Ceara', 248667, '-7.2100', '-39.3200'),
 	   ('JUBABA', 'Dschuba', 'SSD', 'Bahr-al-Jabal', 231463, '4.8500', '31.6000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('JUCHOA', 'Juchitan', 'MEX', 'Oaxaca', 70019, '16.4300', '-95.0200'),
 	   ('JUENKE', 'Jünkerath', 'D', 'Rheinland-Pfalz', 1650, '50.3414', '6.5858'),
 	   ('JUIGCH', 'Juigalpa', 'NIC', 'Chontales', 44686, '12.1100', '-85.3800'),
@@ -21908,7 +21908,7 @@ VALUES ('JUCHOA', 'Juchitan', 'MEX', 'Oaxaca', 70019, '16.4300', '-95.0200'),
 	   ('LUDWIG', 'Ludwigshafen a.R.', 'D', 'Rheinland-Pfalz', 163832, '49.4670', '8.4500'),
 	   ('LUEBKA', 'Luebo', 'ZRE', 'Kasai-Occidental', 40115, '-5.3500', '21.4100'),
 	   ('LUENAA', 'Luena', 'AO', NULL, 84619, '-11.7900', '19.9000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('LUETTI', 'Lüttich', 'B', 'Wallonien', 196291, '50.4500', '5.8490'),
 	   ('LUGATI', 'Lugano', 'CH', 'Tessin', 55907, '46.0100', '8.9400'),
 	   ('LUGOGA', 'Lugo', 'E', 'Galicia', 96208, '43.0200', '-7.5600'),
@@ -22623,7 +22623,7 @@ VALUES ('LUETTI', 'Lüttich', 'B', 'Wallonien', 196291, '50.4500', '5.8490'),
 	   ('NGOCHE', 'Angoche', 'MOS', NULL, 84356, '-16.2300', '39.9100'),
 	   ('NGOCHI', 'Mangochi', 'MW', NULL, 54509, '-14.4600', '35.2700'),
 	   ('NGUELA', 'Benguela', 'AO', NULL, 131281, '-12.5800', '13.4000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('NGURKI', 'Nguruka', 'EAT', 'Kigoma', 27277, '-5.1100', '31.0400'),
 	   ('NGURUN', 'Nguru', 'WAN', NULL, 55685, '12.8800', '10.4500'),
 	   ('NGWIZA', 'Chitungwiza', 'ZW', NULL, 353370, '-18.0000', '31.1000'),
@@ -23322,7 +23322,7 @@ VALUES ('NGURKI', 'Nguruka', 'EAT', 'Kigoma', 27277, '-5.1100', '31.0400'),
 	   ('PORVOO', 'Porvoo', 'SF', 'Uusimaa', 51232, '60.4000', '25.6666'),
 	   ('PORWES', 'Porta Westfalica', 'D', 'Nordrhein-Westfalen', 35660, '52.2400', '8.9214'),
 	   ('POSADA', 'Posadas', 'RA', 'Misiones', 220000, '-27.0000', '-56.0000');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('POTCNO', 'Potchefstroom', 'RSA', 'North West', 111777, '-26.7000', '27.1000'),
 	   ('POTOPO', 'Potosi', 'BOL', 'Potosi', 164600, '-19.5700', '-65.7500'),
 	   ('POTRCO', 'Potrerillos', 'HON', 'Cortes', 20018, '15.2300', '-87.9700'),
@@ -24006,7 +24006,7 @@ VALUES ('POTCNO', 'Potchefstroom', 'RSA', 'North West', 111777, '-26.7000', '27.
 	   ('SASMRP', 'Asmundtorp', 'S', 'Skane', 1602, '55.8800', '12.9300'),
 	   ('SASOFR', 'Sasolburg', 'RSA', 'Free State', 84431, '-26.8200', '27.8400'),
 	   ('SASTRP', 'Astorp', 'S', 'Skane', 8941, '56.1300', '12.9500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('SASUCH', 'San Antonio Suchitepequez', 'GCA', 'Suchitepequez', 15667, '14.5300', '-91.4200'),
 	   ('SATBAJ', 'Sätbajew', 'KAS', 'Qaraghandy', 71226, '47.9011', '67.5342'),
 	   ('SATIFA', 'Satif', 'AG', NULL, 233913, '36.1900', '5.4100'),
@@ -24719,7 +24719,7 @@ VALUES ('SASUCH', 'San Antonio Suchitepequez', 'GCA', 'Suchitepequez', 15667, '1
 	   ('SLINME', 'Lindome', 'S', 'Västra Götaland', 10755, '57.5600', '12.0900'),
 	   ('SLINNG', 'Linköping', 'S', 'Östergötland', 99831, '58.4100', '15.6300'),
 	   ('SLINOE', 'Lindö', 'S', 'Östergötland', 4940, '58.6200', '16.2500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('SLINRG', 'Lindesberg', 'S', 'Örebro', 8816, '59.5800', '15.2500'),
 	   ('SLINYD', 'Linneryd', 'S', 'Kronoberg', 558, '56.6700', '15.1200'),
 	   ('SLISBY', 'Listerby', 'S', 'Blekinge', 749, '56.2000', '15.4000'),
@@ -25435,7 +25435,7 @@ VALUES ('SLINRG', 'Lindesberg', 'S', 'Örebro', 8816, '59.5800', '15.2500'),
 	   ('SVIDEL', 'Vidsel', 'S', 'Norrbotten', 534, '65.8500', '20.5200'),
 	   ('SVIDJA', 'Vidja', 'S', 'Stockholm', 694, '59.2000', '18.0700'),
 	   ('SVIKAD', 'Vikingstad', 'S', 'Östergötland', 2058, '58.3700', '15.4500');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('SVIKAN', 'Vikmanshyttan', 'S', 'Dalarna', 852, '60.2800', '15.8200'),
 	   ('SVIKEN', 'Viken', 'S', 'Skane', 4184, '56.1500', '12.5700'),
 	   ('SVILAD', 'Villshärad', 'S', 'Halland', 622, '56.7000', '12.6800'),
@@ -26146,7 +26146,7 @@ VALUES ('SVIKAN', 'Vikmanshyttan', 'S', 'Dalarna', 852, '60.2800', '15.8200'),
 	   ('UBROOW', 'Broken Arrow', 'USA', 'Oklahoma', 97442, '36.0400', '-95.7900'),
 	   ('UBRORK', 'Brooklyn Park', 'USA', 'Minnesota', 72758, '45.1100', '-93.3500'),
 	   ('UBRYAN', 'Bryan', 'USA', 'Texas', 73832, '30.6700', '-96.3700');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('UBUCYE', 'Buckeye', 'USA', 'Arizona', 61572, '33.4400', '-112.5900'),
 	   ('UBUERK', 'Buena Park', 'USA', 'California', 80406, '33.8600', '-118.0000'),
 	   ('UBUFVE', 'Buffalo Grove', 'USA', 'Illinois', 43054, '42.1700', '-87.9600'),
@@ -26831,7 +26831,7 @@ VALUES ('UBUCYE', 'Buckeye', 'USA', 'Arizona', 61572, '33.4400', '-112.5900'),
 	   ('UTHENY', 'The Colony', 'USA', 'Texas', 44666, '33.0900', '-96.8900'),
 	   ('UTHOKS', 'Thousand Oaks', 'USA', 'California', 123875, '34.1900', '-118.8700'),
 	   ('UTHOON', 'Thornton', 'USA', 'Colorado', 120487, '39.8900', '-104.9600');
-INSERT INTO `ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
+INSERT INTO `t3_ort` (`ONR`, `Name`, `LNR`, `Landesteil`, `Einwohner`, `Breite`, `Laenge`)
 VALUES ('UTIALA', 'Koutiala', 'RMM', NULL, 79502, '12.3900', '-5.4700'),
 	   ('UTIGRD', 'Tigard', 'USA', 'Oregon', 50221, '45.4300', '-122.7700'),
 	   ('UTINRK', 'Tinley Park', 'USA', 'Illinois', 60149, '41.5700', '-87.8000'),
@@ -27433,23 +27433,23 @@ VALUES ('UTIALA', 'Koutiala', 'RMM', NULL, 79502, '12.3900', '-5.4700'),
 --
 
 --
--- Indizes für die Tabelle `kontinent`
+-- Indizes für die Tabelle `t3_kontinent`
 --
-ALTER TABLE `kontinent`
+ALTER TABLE `t3_kontinent`
 	ADD PRIMARY KEY (`KNR`);
 
 --
--- Indizes für die Tabelle `land`
+-- Indizes für die Tabelle `t3_land`
 --
-ALTER TABLE `land`
+ALTER TABLE `t3_land`
 	ADD PRIMARY KEY (`LNR`),
 	ADD KEY `KNR` (`KNR`),
 	ADD KEY `HauptONR` (`HauptONR`);
 
 --
--- Indizes für die Tabelle `ort`
+-- Indizes für die Tabelle `t3_ort`
 --
-ALTER TABLE `ort`
+ALTER TABLE `t3_ort`
 	ADD PRIMARY KEY (`ONR`),
 	ADD KEY `LNR` (`LNR`);
 
@@ -27458,17 +27458,17 @@ ALTER TABLE `ort`
 --
 
 --
--- Constraints der Tabelle `land`
+-- Constraints der Tabelle `t3_land`
 --
-ALTER TABLE `land`
-	ADD CONSTRAINT `land_ibfk_1` FOREIGN KEY (`KNR`) REFERENCES `kontinent` (`KNR`) ON DELETE SET NULL,
-	ADD CONSTRAINT `land_ibfk_2` FOREIGN KEY (`HauptONR`) REFERENCES `ort` (`ONR`) ON DELETE SET NULL;
+ALTER TABLE `t3_land`
+	ADD CONSTRAINT `land_ibfk_1` FOREIGN KEY (`KNR`) REFERENCES `t3_kontinent` (`KNR`) ON DELETE SET NULL,
+	ADD CONSTRAINT `land_ibfk_2` FOREIGN KEY (`HauptONR`) REFERENCES `t3_ort` (`ONR`) ON DELETE SET NULL;
 
 --
--- Constraints der Tabelle `ort`
+-- Constraints der Tabelle `t3_ort`
 --
-ALTER TABLE `ort`
-	ADD CONSTRAINT `ort_ibfk_1` FOREIGN KEY (`LNR`) REFERENCES `land` (`LNR`) ON DELETE SET NULL;
+ALTER TABLE `t3_ort`
+	ADD CONSTRAINT `ort_ibfk_1` FOREIGN KEY (`LNR`) REFERENCES `t3_land` (`LNR`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;

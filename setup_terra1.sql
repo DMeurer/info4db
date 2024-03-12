@@ -253,7 +253,7 @@ VALUES ('AG', 'Algerien', '37.40', 2381741, 'Algiers', 'Afrika', 30, 944),
 CREATE TABLE `t1_ort`
 (
 	`Name`      varchar(30) CHARACTER SET latin1 COLLATE latin1_german1_ci DEFAULT NULL,
-	`t1_land`   varchar(50) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
+	`Land`   varchar(50) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
 	`Einwohner` int(11)                                                    DEFAULT NULL,
 	`Laenge`    decimal(10, 4)                                             DEFAULT NULL,
 	`Breite`    decimal(10, 4)                                             DEFAULT NULL
@@ -265,7 +265,7 @@ CREATE TABLE `t1_ort`
 -- Daten für Tabelle `t1_ort`
 --
 
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Tschaghtscharan', 'Afghanistan', 15000, '65.2516', '34.5225'),
 	   ('Tscharikar', 'Afghanistan', 69110, '69.1666', '35.0167'),
 	   ('Mehtarlam', 'Afghanistan', 70000, '70.1833', '34.6500'),
@@ -1159,7 +1159,7 @@ VALUES ('Tschaghtscharan', 'Afghanistan', 15000, '65.2516', '34.5225'),
 	   ('Ananindeua', 'Brasilien', 479134, '-48.3800', '-1.3800'),
 	   ('Florianopolis', 'Brasilien', 486000, '-48.5400', '-27.6000'),
 	   ('Betim', 'Brasilien', 487798, '-44.1900', '-19.9700');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Serra', 'Brasilien', 491208, '-40.3200', '-20.1300'),
 	   ('Juiz de Fora', 'Brasilien', 503983, '-43.3600', '-21.7500'),
 	   ('Belford Roxo', 'Brasilien', 505565, '-43.4200', '-22.7500'),
@@ -2043,7 +2043,7 @@ VALUES ('Serra', 'Brasilien', 491208, '-40.3200', '-20.1300'),
 	   ('Bräsen', 'Deutschland', 172, '12.3833', '51.9667'),
 	   ('Breitenfeld, Altmark', 'Deutschland', 172, '11.2500', '52.5667'),
 	   ('Damerow bei Pasewalk', 'Deutschland', 172, '13.9833', '53.4500');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Dohm-Lammersdorf', 'Deutschland', 172, '6.6667', '50.2667'),
 	   ('Eickendorf bei Haldensleben', 'Deutschland', 172, '11.1333', '52.3667'),
 	   ('Nürburg', 'Deutschland', 172, '6.9500', '50.3333'),
@@ -2894,7 +2894,7 @@ VALUES ('Dohm-Lammersdorf', 'Deutschland', 172, '6.6667', '50.2667'),
 	   ('Herschbroich', 'Deutschland', 306, '6.9667', '50.3667'),
 	   ('Mannhausen bei Haldensleben', 'Deutschland', 306, '11.2333', '52.4167'),
 	   ('Severin', 'Deutschland', 306, '11.7667', '53.5000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Bauerbach bei Meiningen', 'Deutschland', 307, '10.4000', '50.5000'),
 	   ('Bothkamp', 'Deutschland', 307, '10.1333', '54.2000'),
 	   ('Fisch', 'Deutschland', 307, '6.4833', '49.6167'),
@@ -3742,7 +3742,7 @@ VALUES ('Bauerbach bei Meiningen', 'Deutschland', 307, '10.4000', '50.5000'),
 	   ('Patersberg', 'Deutschland', 451, '7.7333', '50.1500'),
 	   ('Stocksee', 'Deutschland', 451, '10.3500', '54.1000'),
 	   ('Breitenheim', 'Deutschland', 452, '7.6333', '49.7000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Kleve, Dithmarschen', 'Deutschland', 452, '9.1333', '54.3000'),
 	   ('Oberstadt', 'Deutschland', 452, '10.6000', '50.5500'),
 	   ('Ovelgünne', 'Deutschland', 452, '11.2667', '52.1500'),
@@ -4592,7 +4592,7 @@ VALUES ('Kleve, Dithmarschen', 'Deutschland', 452, '9.1333', '54.3000'),
 	   ('Dörpling', 'Deutschland', 611, '9.3000', '54.2667'),
 	   ('Klempau', 'Deutschland', 611, '10.6667', '53.7667'),
 	   ('Kleinau', 'Deutschland', 612, '11.5167', '52.8000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Reinsdorf bei Naumburg', 'Deutschland', 612, '11.6000', '51.3000'),
 	   ('Weberstedt', 'Deutschland', 612, '10.5000', '51.1000'),
 	   ('Niesgrau', 'Deutschland', 612, '9.8167', '54.7500'),
@@ -5439,7 +5439,7 @@ VALUES ('Reinsdorf bei Naumburg', 'Deutschland', 612, '11.6000', '51.3000'),
 	   ('Mengerschied', 'Deutschland', 800, '7.5000', '49.9167'),
 	   ('Neenstetten', 'Deutschland', 800, '10.0167', '48.5500'),
 	   ('Bülzig', 'Deutschland', 801, '12.7500', '51.9000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Dellstedt', 'Deutschland', 801, '9.3667', '54.2333'),
 	   ('Fargau-Pratjau', 'Deutschland', 801, '10.4167', '54.3333'),
 	   ('Irmtraut', 'Deutschland', 801, '8.0667', '50.5500'),
@@ -6282,7 +6282,7 @@ VALUES ('Dellstedt', 'Deutschland', 801, '9.3667', '54.2333'),
 	   ('Breitscheidt, Sieg', 'Deutschland', 1030, '7.6500', '50.7500'),
 	   ('Rosenau bei Wusterwitz', 'Deutschland', 1030, '12.3583', '52.3292'),
 	   ('Alesheim', 'Deutschland', 1031, '10.8667', '49.0500');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Großbartloff', 'Deutschland', 1031, '10.2167', '51.2500'),
 	   ('Hendungen', 'Deutschland', 1031, '10.3500', '50.4000'),
 	   ('Linsburg', 'Deutschland', 1031, '9.3034', '52.5930'),
@@ -7107,7 +7107,7 @@ VALUES ('Großbartloff', 'Deutschland', 1031, '10.2167', '51.2500'),
 	   ('Barenburg bei Sulingen', 'Deutschland', 1325, '8.8000', '52.6167'),
 	   ('Großkmehlen', 'Deutschland', 1325, '13.7333', '51.3833'),
 	   ('Wiednitz', 'Deutschland', 1325, '14.0333', '51.4000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Ellerhoop', 'Deutschland', 1326, '9.7667', '53.7333'),
 	   ('Fürstenberg, Weser', 'Deutschland', 1326, '9.4000', '51.7333'),
 	   ('Kretzschau', 'Deutschland', 1326, '12.0667', '51.0500'),
@@ -7931,7 +7931,7 @@ VALUES ('Ellerhoop', 'Deutschland', 1326, '9.7667', '53.7333'),
 	   ('Aufhausen, Oberpfalz', 'Deutschland', 1738, '12.2833', '48.8667'),
 	   ('Bruchweiler-Bärenbach', 'Deutschland', 1739, '7.8000', '49.1167'),
 	   ('Hedersleben bei Aschersleben', 'Deutschland', 1740, '11.2667', '51.8667');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Feilbingert', 'Deutschland', 1741, '7.8000', '49.7667'),
 	   ('Hermersberg', 'Deutschland', 1742, '7.6333', '49.3167'),
 	   ('Eggingen, Kreis Waldshut', 'Deutschland', 1744, '8.4000', '47.7000'),
@@ -8753,7 +8753,7 @@ VALUES ('Feilbingert', 'Deutschland', 1741, '7.8000', '49.7667'),
 	   ('Briesen (Mark)', 'Deutschland', 2333, '14.3000', '52.3250'),
 	   ('Gornsdorf', 'Deutschland', 2334, '12.8833', '50.7000'),
 	   ('Petting', 'Deutschland', 2336, '12.8167', '47.9167');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Ahorn (Baden)', 'Deutschland', 2337, '9.5269', '49.5083'),
 	   ('Brücken (Pfalz)', 'Deutschland', 2339, '7.3667', '49.4333'),
 	   ('Gebesee', 'Deutschland', 2341, '10.9333', '51.1167'),
@@ -9576,7 +9576,7 @@ VALUES ('Ahorn (Baden)', 'Deutschland', 2337, '9.5269', '49.5083'),
 	   ('Jesewitz', 'Deutschland', 3141, '12.5000', '51.4333'),
 	   ('Melbeck', 'Deutschland', 3141, '10.4000', '53.1833'),
 	   ('Ohlsbach', 'Deutschland', 3141, '8.0000', '48.4333');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Wustrow (Wendland)', 'Deutschland', 3141, '11.1167', '52.9167'),
 	   ('Günthersleben-Wechmar', 'Deutschland', 3141, '10.7750', '50.9000'),
 	   ('Aidenbach, Niederbayern', 'Deutschland', 3143, '13.1000', '48.5667'),
@@ -10394,7 +10394,7 @@ VALUES ('Wustrow (Wendland)', 'Deutschland', 3141, '11.1167', '52.9167'),
 	   ('Gessertshausen', 'Deutschland', 4327, '10.7333', '48.3333'),
 	   ('Bürgstadt', 'Deutschland', 4333, '9.2714', '49.7136'),
 	   ('Engelsbrand', 'Deutschland', 4333, '8.6500', '48.8333');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Albershausen', 'Deutschland', 4334, '9.5667', '48.6833'),
 	   ('Ötigheim', 'Deutschland', 4334, '8.2333', '48.8833'),
 	   ('Dransfeld', 'Deutschland', 4336, '9.7667', '51.5000'),
@@ -11221,7 +11221,7 @@ VALUES ('Albershausen', 'Deutschland', 4334, '9.5667', '48.6833'),
 	   ('Ruhpolding', 'Deutschland', 6330, '12.6500', '47.7667'),
 	   ('Mudersbach, Sieg', 'Deutschland', 6332, '7.9500', '50.8167'),
 	   ('Ilsenburg (Harz)', 'Deutschland', 6334, '10.6833', '51.8667');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Bodenwerder', 'Deutschland', 6337, '9.5167', '51.9667'),
 	   ('Zusmarshausen', 'Deutschland', 6348, '10.6000', '48.4000'),
 	   ('Eggolsheim', 'Deutschland', 6352, '11.0581', '49.7711'),
@@ -12054,7 +12054,7 @@ VALUES ('Bodenwerder', 'Deutschland', 6337, '9.5167', '51.9667'),
 	   ('Süßen', 'Deutschland', 10137, '9.7667', '48.6833'),
 	   ('Wildberg (Württemberg)', 'Deutschland', 10140, '8.7452', '48.6251'),
 	   ('Hilter am Teutoburger Wald', 'Deutschland', 10152, '8.1500', '52.1500');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Diedorf (Schwaben)', 'Deutschland', 10154, '10.7667', '48.3500'),
 	   ('Wunsiedel im Fichtelgebirge', 'Deutschland', 10154, '12.0167', '50.0333'),
 	   ('Augustdorf', 'Deutschland', 10155, '8.7333', '51.9000'),
@@ -12879,7 +12879,7 @@ VALUES ('Diedorf (Schwaben)', 'Deutschland', 10154, '10.7667', '48.3500'),
 	   ('Schwalmtal, Niederrhein', 'Deutschland', 19397, '6.2667', '51.2167'),
 	   ('Schifferstadt', 'Deutschland', 19400, '8.3761', '49.3861'),
 	   ('Hechingen', 'Deutschland', 19438, '8.9833', '48.3500');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Telgte', 'Deutschland', 19489, '7.7833', '51.9833'),
 	   ('Parchim', 'Deutschland', 19610, '11.8500', '53.4333'),
 	   ('Puchheim, Oberbayern', 'Deutschland', 19619, '11.3500', '48.1500'),
@@ -13734,7 +13734,7 @@ VALUES ('Telgte', 'Deutschland', 19489, '7.7833', '51.9833'),
 	   ('Seguela', 'Elfenbeinküste', 61750, '-6.6700', '7.9500'),
 	   ('Katiola', 'Elfenbeinküste', 62338, '-5.1100', '8.1500'),
 	   ('Bondoukou', 'Elfenbeinküste', 62564, '-2.8000', '8.0300');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Sinfra', 'Elfenbeinküste', 65169, '-5.9200', '6.6200'),
 	   ('Bouafle', 'Elfenbeinküste', 66302, '-5.7500', '6.9800'),
 	   ('Duekoue', 'Elfenbeinküste', 70292, '-7.3500', '6.7400'),
@@ -14613,7 +14613,7 @@ VALUES ('Sinfra', 'Elfenbeinküste', 65169, '-5.9200', '6.6200'),
 	   ('Baracoa', 'Honduras', 11727, '-87.8500', '15.7700'),
 	   ('Saba', 'Honduras', 11968, '-86.2500', '15.4700'),
 	   ('Trujillo', 'Honduras', 12249, '-85.9600', '15.9100');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Marcala', 'Honduras', 12934, '-88.0400', '14.1500'),
 	   ('Santa Cruz de Yojoa', 'Honduras', 13038, '-87.9000', '14.9800'),
 	   ('Morazan', 'Honduras', 13512, '-87.6100', '15.3200'),
@@ -15546,7 +15546,7 @@ VALUES ('Marcala', 'Honduras', 12934, '-88.0400', '14.1500'),
 	   ('Pedara', 'Italien', 13433, '15.0700', '37.6400'),
 	   ('Campodarsego', 'Italien', 13447, '11.9000', '45.5000'),
 	   ('Castel San Giorgio', 'Italien', 13449, '14.6900', '40.7800');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Montefiascone', 'Italien', 13490, '12.0200', '42.5400'),
 	   ('Montelupo Fiorentino', 'Italien', 13499, '11.0100', '43.7400'),
 	   ('Cassano delle Murge', 'Italien', 13503, '16.7600', '40.8900'),
@@ -16482,7 +16482,7 @@ VALUES ('Montefiascone', 'Italien', 13490, '12.0200', '42.5400'),
 	   ('Tottori', 'Japan', 208578, '134.2300', '35.5000'),
 	   ('Saga', 'Japan', 210035, '130.3000', '33.2500'),
 	   ('Tsukuba', 'Japan', 211924, '140.0900', '36.2100');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Joetsu', 'Japan', 217152, '138.2500', '37.1200'),
 	   ('Isesaki', 'Japan', 219564, '139.2000', '36.3200'),
 	   ('Chofu', 'Japan', 224258, '139.5500', '35.6500'),
@@ -17392,7 +17392,7 @@ VALUES ('Joetsu', 'Japan', 217152, '138.2500', '37.1200'),
 	   ('Kasungu', 'Malawi', 64433, '33.4800', '-13.0200'),
 	   ('Zomba', 'Malawi', 105264, '35.3100', '-15.3900'),
 	   ('Mzuzu', 'Malawi', 187151, '34.0200', '-11.4600');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Blantyre', 'Malawi', 760064, '34.9900', '-15.7900'),
 	   ('Lilongwe', 'Malawi', 923000, '33.8000', '-13.9700'),
 	   ('Kuala Lumpur', 'Malaysia', 1100000, '101.0000', '3.0000'),
@@ -18307,7 +18307,7 @@ VALUES ('Blantyre', 'Malawi', 760064, '34.9900', '-15.7900'),
 	   ('Kaunertal', 'Österreich', 617, '10.7500', '47.0333'),
 	   ('Waldkirchen an der Thaya', 'Österreich', 618, '15.3500', '48.9333'),
 	   ('Sankt Georgen bei Obernberg am', 'Österreich', 619, '13.3667', '48.3000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Weilbach', 'Österreich', 620, '13.3833', '48.2833'),
 	   ('Reichendorf', 'Österreich', 621, '15.7516', '47.1883'),
 	   ('Sankt Ulrich im Mühlkreis', 'Österreich', 622, '14.0333', '48.4667'),
@@ -19163,7 +19163,7 @@ VALUES ('Weilbach', 'Österreich', 620, '13.3833', '48.2833'),
 	   ('Hofkirchen an der Trattnach', 'Österreich', 1502, '13.7390', '48.2193'),
 	   ('Großradl', 'Österreich', 1502, '15.2685', '46.6852'),
 	   ('Lesachtal', 'Österreich', 1503, '12.8166', '46.6922');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Offenhausen', 'Österreich', 1503, '13.8333', '48.1500'),
 	   ('Attersee', 'Österreich', 1504, '13.5500', '47.9167'),
 	   ('Jochberg', 'Österreich', 1508, '12.4000', '47.3833'),
@@ -20011,7 +20011,7 @@ VALUES ('Offenhausen', 'Österreich', 1503, '13.8333', '48.1500'),
 	   ('Mauerbach', 'Österreich', 3502, '16.1500', '48.2333'),
 	   ('Ampflwang im Hausruckwald', 'Österreich', 3504, '13.5667', '48.0833'),
 	   ('Eferding', 'Österreich', 3521, '13.9667', '48.3000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Frauenstein', 'Österreich', 3522, '14.3348', '46.7897'),
 	   ('Frankenmarkt', 'Österreich', 3533, '13.4167', '47.9833'),
 	   ('Schwarzach im Pongau', 'Österreich', 3534, '13.1500', '47.3167'),
@@ -20923,7 +20923,7 @@ VALUES ('Frauenstein', 'Österreich', 3522, '14.3348', '46.7897'),
 	   ('Ostroda', 'Polen', 33172, '19.9600', '53.7100'),
 	   ('Nowy Targ', 'Polen', 33658, '20.0300', '49.4900'),
 	   ('Czeladz', 'Polen', 33731, '19.1300', '50.3200');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Dzierzoniow', 'Polen', 34068, '16.6500', '50.7300'),
 	   ('Police', 'Polen', 34079, '14.5600', '53.5500'),
 	   ('Czechowice-Dziedzice', 'Polen', 34628, '19.0200', '49.9100'),
@@ -21876,7 +21876,7 @@ VALUES ('Dzierzoniow', 'Polen', 34068, '16.6500', '50.7300'),
 	   ('Kaxholmen', 'Schweden', 1427, '14.3000', '57.8700'),
 	   ('Gullbrandstorp', 'Schweden', 1429, '12.7300', '56.7000'),
 	   ('Boliden', 'Schweden', 1434, '20.3800', '64.8700');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Järpen', 'Schweden', 1435, '13.4800', '63.3500'),
 	   ('Rönnäng', 'Schweden', 1438, '11.5800', '57.9300'),
 	   ('Landsbro', 'Schweden', 1444, '14.9000', '57.3700'),
@@ -22852,7 +22852,7 @@ VALUES ('Järpen', 'Schweden', 1435, '13.4800', '63.3500'),
 	   ('Gündlischwand', 'Schweiz', 263, '7.9319', '46.6463'),
 	   ('Bibern (SH)', 'Schweiz', 263, '8.6681', '47.7645'),
 	   ('Saulcy', 'Schweiz', 264, '7.1535', '47.3025');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Kallern', 'Schweiz', 264, '8.2898', '47.3090'),
 	   ('Hauenstein-Ifenthal', 'Schweiz', 265, '7.8574', '47.3689'),
 	   ('Ferlens (VD)', 'Schweiz', 265, '6.7440', '46.5857'),
@@ -23839,7 +23839,7 @@ VALUES ('Kallern', 'Schweiz', 264, '8.2898', '47.3090'),
 	   ('Chavannes-de-Bogis', 'Schweiz', 1048, '6.1542', '46.3413'),
 	   ('Baltschieder', 'Schweiz', 1050, '7.8781', '46.3694'),
 	   ('Remigen', 'Schweiz', 1052, '8.1762', '47.5148');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Haut-Vully', 'Schweiz', 1055, '7.0733', '46.9551'),
 	   ('Quinto', 'Schweiz', 1057, '8.7122', '46.5179'),
 	   ('Tübach', 'Schweiz', 1057, '9.4539', '47.4823'),
@@ -24808,7 +24808,7 @@ VALUES ('Haut-Vully', 'Schweiz', 1055, '7.0733', '46.9551'),
 	   ('Meiringen', 'Schweiz', 4723, '8.1181', '46.7225'),
 	   ('Oberägeri', 'Schweiz', 4740, '8.6432', '47.1321'),
 	   ('Hergiswil (NW)', 'Schweiz', 4754, '8.2572', '46.9794');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Schönenwerd', 'Schweiz', 4761, '8.0109', '47.3729'),
 	   ('Ettingen', 'Schweiz', 4764, '7.5473', '47.4758'),
 	   ('Sargans', 'Schweiz', 4765, '9.4503', '47.0554'),
@@ -25749,7 +25749,7 @@ VALUES ('Schönenwerd', 'Schweiz', 4761, '8.0109', '47.3729'),
 	   ('Babati', 'Tansania', 39074, '35.7500', '-4.2200'),
 	   ('Makambako', 'Tansania', 39141, '34.8300', '-8.8500'),
 	   ('Tunduma', 'Tansania', 39537, '32.7700', '-9.3000');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Njombe', 'Tansania', 39676, '34.7700', '-9.3300'),
 	   ('Missungwi', 'Tansania', 39753, '33.0800', '-2.8500'),
 	   ('Kiranyi', 'Tansania', 40164, NULL, NULL),
@@ -26568,7 +26568,7 @@ VALUES ('Njombe', 'Tansania', 39676, '34.7700', '-9.3300'),
 	   ('Poway', 'Vereinigte Staaten von Amerika', 49463, '-117.0200', '32.9900'),
 	   ('Downers Grove', 'Vereinigte Staaten von Amerika', 49475, '-88.0200', '41.8000'),
 	   ('Pine Bluff', 'Vereinigte Staaten von Amerika', 49476, '-92.0200', '34.2100');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Berwyn', 'Vereinigte Staaten von Amerika', 49477, '-87.7900', '41.8400'),
 	   ('Lakewood', 'Vereinigte Staaten von Amerika', 49526, '-81.8000', '41.4800'),
 	   ('Dearborn Heights', 'Vereinigte Staaten von Amerika', 49619, '-83.2700', '42.3300'),
@@ -27211,7 +27211,7 @@ VALUES ('Berwyn', 'Vereinigte Staaten von Amerika', 49477, '-87.7900', '41.8400'
 	   ('Hampton', 'Vereinigte Staaten von Amerika', 148317, '-76.2900', '37.0500'),
 	   ('Naperville', 'Vereinigte Staaten von Amerika', 149201, '-88.1500', '41.7600'),
 	   ('Pembroke Pines', 'Vereinigte Staaten von Amerika', 149722, '-80.3400', '26.0100');
-INSERT INTO `t1_ort` (`Name`, `t1_land`, `Einwohner`, `Laenge`, `Breite`)
+INSERT INTO `t1_ort` (`Name`, `Land`, `Einwohner`, `Laenge`, `Breite`)
 VALUES ('Springfield', 'Vereinigte Staaten von Amerika', 150412, '-72.5400', '42.1200'),
 	   ('Pasadena', 'Vereinigte Staaten von Amerika', 150710, '-95.1500', '29.6600'),
 	   ('Palmdale', 'Vereinigte Staaten von Amerika', 150819, '-118.0900', '34.6100'),
