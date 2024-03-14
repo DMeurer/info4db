@@ -262,6 +262,8 @@ where land = 'Deutschland'
 
 # O-Notation
 
+> **_Wie lange braucht man Algorithmus für eine Liste mit n Elementen?_**
+
 Es wird immer "gegen unendlich" gerechnet. Das bedeutet, O(5n) ist das gleiche wie O(n).
 
 ![O-Notation](big-o-notation.png)
@@ -284,6 +286,47 @@ arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let i = 0; i < arr.length; i *= 2) {
     console.log(arr[i]);
 }
+```
+
+**Beispiel:**
+Wir suchen eine Zahl in einer sortierten Liste.
+
+```mermaid
+graph TD
+    A[1, 2, 3, 4, 5, 6, 7] --> |<4| B[1, 2, 3]
+    A --> |=4| C[4]
+    A --> |>4| D[5, 6, 7]
+    B --> |<2| E[1]
+    B --> |=2| F[2]
+    B --> |>2| G[3]
+    D --> |<6| H[5]
+    D --> |=6| I[6]
+    D --> |>6| J[7]
+    
+```
+
+**_American Version_** (Bigger and better)
+```mermaid
+graph TD
+    A[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] --> |<4| B[1, 2, 3, 4, 5, 6]
+    A --> |=7| C[7]
+    A --> |>7| D[8, 9, 10, 11, 12, 13]
+    B --> |<3| E[1, 2]
+    B --> |=3| F[3]
+    B --> |>3| G[4, 5, 6]
+    D --> |<10| H[8, 9]
+    D --> |=10| I[10]
+    D --> |>10| J[11, 12, 13]
+    E --> |<2| K[1]
+    E --> |=2| L[2]
+    G --> |<5| M[4]
+    G --> |=5| N[5]
+    G --> |>5| O[6]
+    H --> |<9| P[8]
+    H --> |=9| Q[9]
+    J --> |<12| R[11]
+    J --> |=12| S[12]
+    J --> |>12| T[13]
 ```
 
 ## O(n)
