@@ -25,13 +25,15 @@ from scipy.special import gamma
 plt.style.use('bmh')
 
 # Set up runtime comparisons
-n = np.linspace(1, 15, 1000)
+n = np.linspace(0, 15, 1000)
+n_ab_1 = np.linspace(1, 15, 1000)
 labels = ['Constant', 'Logarithmic', 'Linear', 'Log Linear', 'Quadratic', 'Cubic', 'Exponential', 'Factorial']
-big_o = [np.ones(n.shape), np.log(n), n, n * np.log(n), n ** 2, n ** 3, 2.4 ** n, gamma(n)]
+big_o = [np.ones(n.shape), np.log(n), n, n * np.log(n), n ** 2, n ** 3, 2.4 ** n, gamma(n_ab_1)]
 
 # Plot setup
 plt.figure(figsize=(10, 12), dpi=150)
 plt.ylim(0, 350)
+plt.xlim(0, 15)
 
 for i in range(len(big_o)):
     plt.plot(n, big_o[i], label=labels[i])
