@@ -264,6 +264,7 @@ where land = 'Deutschland'
 
 Es wird immer "gegen unendlich" gerechnet. Das bedeutet, O(5n) ist das gleiche wie O(n).
 
+![O-Notation](big-o-notation.png)
 
 ## O(1)
 
