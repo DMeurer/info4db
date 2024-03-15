@@ -194,8 +194,9 @@ where land = 'Deutschland'
 > Schreibe eine SQL-Abfrage, um alle Orte in Frankreich zu finden, und gebe dabei den Namen, die Einwohnerzahl, die Länge und die Breite aus.
 
 ```SQL
-
-
+select t1_ort.name, t1_ort.Einwohner, t1_ort.laenge, t1_ort.breite
+from t1_ort
+where 'Frankreich' = land
 ```
 
 > **Aufgabe 2**
@@ -204,6 +205,10 @@ where land = 'Deutschland'
 
 ```SQL
 
+select t1_ort.NaMe, t1_ort.Einwohner, t1_ort.laenge, t1_ort.breite
+from t1_ort
+where 'Frankreich' = land
+order by t1_ort.Einwohner DESC
 
 ```
 
@@ -213,16 +218,34 @@ where land = 'Deutschland'
 
 ```SQL
 
+select t1_ort.NaMe, t1_ort.Einwohner, t1_ort.laenge, t1_ort.breite
+from t1_ort
+where 'Frankreich' = land and Einwohner >= 1000
+order by t1_ort.Einwohner DESC
 
 ```
 
 > **Aufgabe 4**
 >
-> Jetzt mal was anderes. Jetzt hätte ich gern alle Orte, die in Deutschland liegen und deren Name mit 'heim' endet und die zwischen 10 Mio. und 1000 Mio. Einwohner haben.
+> Jetzt mal was anderes. 
+> Jetzt hätte ich gern alle Orte, die in Deutschland liegen und deren Name mit 'heim' endet und die zwischen 10 Tsd. und 100 Tsd. Einwohner haben.
 
 ```SQL
+select *
+from t1_ort o
+where 'Deutschland' = o.Land
+  and o.Einwohner > 10000
+  and o.Einwohner < 100000
+  and o.Name like '%heim'
+```
 
+Lass mal Spaichheim finden
 
+```SQL
+select *
+from t1_ort o
+where 'Deutschland' = o.Land
+  and o.Name like '%chinge%'
 ```
 
 ### Relationen, Joins, Verknüpfungen, Verbindungen, nenn es wie du willst
@@ -234,12 +257,16 @@ where land = 'Deutschland'
 
 > **Aufgabe 5**
 >
-> Geb den Name, das Land und die Einwohnerzahl aller Orte in Deutschland aus, die Spaichingen heißen.
+> Geb den Name, das Land und die Einwohnerzahl aller Orte in Deutschland aus, die Denkingen heißen.
 
 ```SQL
 
-
-
+select o.name, l.name, o.einwohner
+from t3_ort o,
+     t3_land l
+where o.LNR = l.LNR
+  and o.name like '%Denkingen%'
+  and l.Name = 'Deutschland'
 ```
 
 > **Aufgabe 6**
@@ -248,16 +275,33 @@ where land = 'Deutschland'
 
 ```SQL
 
+select o.name as Ortname, l.name as Ländername, o.einwohner
+from t3_ort o,
+     t3_land l
+where o.LNR = l.LNR
+  and o.name like '%Denkingen%'
+  and l.Name = 'Deutschland'
 
 ```
 
 > **Aufgabe 7**
 > 
 > Jetzt hätte ich gerne jede Hauptstadt und den dazugehörigen Kontinent.
+> Von allem bitte den Name geben.
 
 ```SQL
+select o.Name as oRT, k.Name as kOnTiNeNt
+from t3_land l, t3_ort o, t3_kontinent k
+where o.ONR = l.HauptONR and l.KNR = k.KNR
+```
 
+> **Aufgabe 8**
+> 
+> Mach mal Koordinaten, gerundet auf 3 nachkommastellen und mit N und S
 
+```SQL
+select CONCAT(ABS(Round(Laenge, 3)), ' ° ', IIF(Laenge >= 0, 'N', 'S'))
+from t1_ort
 ```
 
 # O-Notation

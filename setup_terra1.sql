@@ -253,7 +253,7 @@ VALUES ('AG', 'Algerien', '37.40', 2381741, 'Algiers', 'Afrika', 30, 944),
 CREATE TABLE `t1_ort`
 (
 	`Name`      varchar(30) CHARACTER SET latin1 COLLATE latin1_german1_ci DEFAULT NULL,
-	`Land`   varchar(50) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
+	`Land`      varchar(50) CHARACTER SET latin1 COLLATE latin1_german1_ci NOT NULL,
 	`Einwohner` int(11)                                                    DEFAULT NULL,
 	`Laenge`    decimal(10, 4)                                             DEFAULT NULL,
 	`Breite`    decimal(10, 4)                                             DEFAULT NULL
